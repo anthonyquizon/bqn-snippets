@@ -1,5 +1,7 @@
 # bqn-snippets
-Useful BQN snippets and examples
+**Useful BQN snippets and examples**
+
+
 
 Argument parsing for optional flags
 ```bqn
