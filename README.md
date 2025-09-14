@@ -23,11 +23,11 @@ x←{
     z⇐...
 }
 
-# usage. Deconstruct is easier than deconstructing a list since order is not needed and deconstruction can be partial
+# usage. Deconstruct is easier than when using a list since order is not needed and can be partial
 # eg. a‿b‿c‿....x‿y‿z←lst
 a‿c⇐y
 
-# However updating is slighly tedious and cannot use ⌾ to update a single item if it were a list instead
+# However updating is slighly tedious and cannot use ⌾ to update a single item if it were a list
 # but shouldn't be an issue if the namespace is small
 d←⟨4,5,7⟩
 y←{a‿b‿...x‿y‿z⇐x⋄c⇐d} # Copy namespace but update c
