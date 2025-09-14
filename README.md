@@ -1,10 +1,9 @@
 # bqn-snippets
 Useful BQN snippets and examples
 
-Argument flag parsing
+Argument parsing for optional flags
+eg. `bqn -a foo -b bar -c baz → {a⇐"foo"⋄b⇐"bar"⋄c⇐"baz"}`
 ```bqn
-# parse optional argument flags
-# eg. bqn -a foo -b bar -c baz → {a⇐"foo"⋄b⇐"bar"⋄c⇐"baz"}
 flgs←{
   a⇐∾𝕩(⊣/˜·»⍷˜)⋈"-a"
   b⇐∾𝕩(⊣/˜·»⍷˜)⋈"-b"
@@ -12,7 +11,7 @@ flgs←{
 }•args 
 ```
 
-Using namespaces to organise objects
+Using namespaces to organise collections
 ```bqn
 x←{
     a⇐⟨1,2,3⟩
