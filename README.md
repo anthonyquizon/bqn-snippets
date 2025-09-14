@@ -2,13 +2,13 @@
 Useful BQN snippets and examples
 
 Argument parsing for optional flags
-eg. `bqn -a foo -b bar -c baz → {a⇐"foo"⋄b⇐"bar"⋄c⇐"baz"}`
 ```bqn
 flgs←{
   a⇐∾𝕩(⊣/˜·»⍷˜)⋈"-a"
   b⇐∾𝕩(⊣/˜·»⍷˜)⋈"-b"
   c⇐∾𝕩(⊣/˜·»⍷˜)⋈"-c"
 }•args 
+# usage eg. `bqn -a foo -b bar -c baz → {a⇐"foo"⋄b⇐"bar"⋄c⇐"baz"}`
 ```
 
 Using namespaces to organise collections
