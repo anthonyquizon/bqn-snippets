@@ -59,10 +59,10 @@ Draw⇐{
     s←0<∊⊸∧˘n⋄e←0<(⌽∘∊∘⌽)⊸∧˘n⋄h←s+`∘-˘e⋄m←0<h∧n⋄v←s∧e  # s: start, e: ends, h: horizontals, m: middles, v: verticals 
     b←" ─┬├┐│"⊏˜(0⥊˜≠⍉n)∾1↓⌈´h‿m‿s‿e‿v×¨1+↕5           # branches - nullify root layer. 1: horizontal, 2: middle, 3: start, 4: end, 5: vertical, 
     o←∾˘(0⊸≢)◶" "‿"•"¨n                                # convert nodes to characters
-    •Out˘b{𝕨∾(@+10)∾𝕩}˘o                               # combine branches and nodes and print
+    @⊣•Out˘b{𝕨∾(@+10)∾𝕩}˘o                               # combine branches and nodes and print
 }
 
-@⊣Draw 0‿0‿1‿1‿1‿2‿0‿2
+Draw 0‿0‿1‿1‿1‿2‿0‿2
 # Output:
 # •
 # ├──┐
@@ -100,3 +100,19 @@ prop⇐{
 }
 
 ```
+
+Inline unit tests
+```bqn
+_test⇐{{𝕊:•Out "☺"}∘𝔽⍟⊑⟨"test"⟩⊸∊𝕩}
+
+{𝕊:
+  "test one" ! 1≡1
+  "test two" ! 2≡2
+} _test •args
+
+# run via bqn file.bqn test
+# runs tests only with `test` argument
+# prints ☺ when all tests pass
+```
+
+
