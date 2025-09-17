@@ -103,11 +103,11 @@ prop⇐{
 
 Inline unit tests
 ```bqn
-{𝕩∨´∘⍷˜⋈"test"?
+(∨´⟨"test"⟩⍷𝕩?
   "test one" ! 1≡1
   "test two" ! 2≡2
   •Out "☺"
-;·:@} •args
+;@} •args
 
 # run via bqn file.bqn test
 # runs tests only with `test` argument
